@@ -18,6 +18,7 @@ public class SimpleLinkedBagTest extends student.TestCase
     /**
      * This is the setup which will be used for the test cases 
      */
+    @SuppressWarnings("Convert2Diamond")
     public void setUp()
     {
         this.emptyBag = new SimpleLinkedBag<Integer>();
@@ -111,6 +112,10 @@ public class SimpleLinkedBagTest extends student.TestCase
         this.emptyBag.add(3);
         assertFalse(this.emptyBag.remove(null));
         assertFalse(this.emptyBag.remove(20));
+    }
+
+    private void assertTrue(boolean empty) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }
